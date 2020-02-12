@@ -1,0 +1,15 @@
+<br/>
+
+<h2 class="text-center"> Regarde les gossips de ta ville ! </h2>
+<br/>
+
+<% @cities_arr.each do |city| %>
+
+			<div class="col-md-6  mx-auto">
+				<div class="card text-center m-1" style=" height: auto;">
+					<div class="card-header ">
+						<%= link_to "#{city.name}", city_path(city.id) %>
+					</div>
+				</div>
+			</div>
+		<% end %>
