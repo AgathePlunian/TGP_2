@@ -8,9 +8,9 @@ class CitiesController < ApplicationController
     @cities_gossips = []
     @city = City.find(params[:id])
     Gossip.where(city_id: params[:id]).each do |gossip|
-      @cities_gossips << gossip.title
+      @cities_gossips << gossip
     end
-  puts @cities_gossips
+  puts "wwwwwwwwwww #{@cities_gossips}wwwwwwwwwww"
   
 
 

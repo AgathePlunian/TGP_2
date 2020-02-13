@@ -13,6 +13,10 @@
 					<div class="card-body">
 						<p class="card-text"><%= gossip.content %></p>
 						<div class="btn btn-info, text-white bg-dark">by <%=link_to "#{gossip.user.first_name}", user_path(gossip.user_id)%> </div>
+						<div class="btn btn-primary, text-white"><%=link_to "Editer", edit_gossip_path(gossip.id)%> </div>
+            
+						
+						<div>  <a href="<%= gossip_path(gossip.id)%>" class= "btn btn-primary" data-confirm="Etes vous sur ?" data-method="DELETE">Supprimer</a></div>					
 					</div>
 				</div>
 			</div>

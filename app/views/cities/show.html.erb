@@ -1,4 +1,18 @@
 
-
-		<p><%=@cities_gossips%> <br/> </p>
-		
+		<div class="row justify-content-between align-items-center">
+		<% @cities_gossips.each do |gossip| %>
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div class="card text-center m-1" style="width: 15rem; height: auto;">
+					<div class="card-header">
+						<%= gossip.title %>
+					</div>
+					<div class="card-body">
+						<p class="card-text"><%= gossip.content %> </p>
+					</div>
+					<div class="card-body">
+							<div class="btn btn-info, text-white bg-dark">by <%=link_to "#{gossip.user.first_name}", user_path(gossip.user_id)%> </div>
+					</div>
+					
+				</div>
+			</div>
+		<% end %>

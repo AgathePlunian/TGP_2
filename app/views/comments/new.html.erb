@@ -1,0 +1,25 @@
+<div class="container">
+	<h1 class="text-center m-2">Ajouter un commentaire</h1>
+
+	<form action="<%= comments_path %>" method="POST">
+
+		<!-- AUTHENTIFICATION TOKEN -->
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+		<!-- FORM -->
+		<div class="form-group">
+			<label for="User">Utilisateur</label>
+			<input class="form-control" type="text" name="user">
+		</div>	
+
+		<div class="form-group">
+			<label for="title">Commentaire</label>
+			<input class="form-control" type="text" name="content">
+		</div>	
+
+		<!-- BUTTON -->
+		<div class="form-group">
+			<input class="btn btn-success form-control" type="submit" value="Creer">
+		</div>	
+	</form>
+</div>

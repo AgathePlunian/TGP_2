@@ -2,5 +2,8 @@
 
 <h3> <%= @gossip.title %> </h3>
 <p> <%= @gossip.content %> </p>
-<p> by : <%= link_to "#{@gossip.user.first_name}", user_path(@gossip.user_id) %> </p>
+<p> By : <%= link_to "#{@gossip.user.first_name}", user_path(@gossip.user_id) %> </p>
+<p> From <%= @gossip.city.name %></p>
 
+<div class="btn btn-primary, text-white"><%=link_to "Voir tous les commentaires", comment_path(@gossip.id)%> </div>
+<div class="btn btn-link"><%=link_to "Ajouter un commentaire", new_comment_path(@gossip.id)%> </div>

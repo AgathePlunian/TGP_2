@@ -5,4 +5,7 @@ class Gossip < ApplicationRecord
 
 	#LINK CITY
 	belongs_to :city, optional: true
+
+	#COMMENT
+	has_many :comments
 end

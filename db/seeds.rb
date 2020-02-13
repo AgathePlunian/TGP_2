@@ -9,6 +9,7 @@
 User.destroy_all
 Gossip.destroy_all
 City.destroy_all
+Comment.destroy_all
 
 #SEED CITY
 5.times do
@@ -26,4 +27,11 @@ User.all.each do |user|
 	5.times do
 		Gossip.create(user: user, title: Faker::DcComics.title, content: Faker::Quote.famous_last_words, city: City.all[rand(0..4)])
 	end
+end
+
+#SEED COMMENT
+Gossip.all.each do |each_gossip|
+	2.times do
+		Comment.create(content: Faker::Lorem.paragraph, user: User.all[rand(0..9)], gossip: each_gossip)
+end
 end

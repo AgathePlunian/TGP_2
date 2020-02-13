@@ -1,0 +1,13 @@
+<% @gossips_comments.each do |comment| %>
+
+			<div class="col-md-6  mx-auto">
+				<div class="card text-center m-1" style=" height: auto;">
+					<div class="card-header ">
+						<%= comment.content%>
+            </div>
+            <div class="body-card">
+            <%=comment.user.first_name%>
+           </div>
+				</div>
+			</div>
+		<% end %>
